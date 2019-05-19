@@ -1,27 +1,56 @@
-var arguments;
-arguments = WScript.Arguments;
-if (arguments.Count() == 0) {
-	WScript.Echo("Нет аргумента командной строки. Воспользуйтесь справкой: /?");
-} else
-if(arguments(0) == "/?") {
-	WScript.Echo("Аргументы командной строки:\n/1  - Сравнение двух чисел, введенных с клавиатуры\n/2  - Выводит на экран путь к исполняемому файлу сервера сценариев, имя запущенного сценария и версию WSH\n/? - Справка");
-} else if(arguments(0) == "/1") {
-	
-	var a = 0, b = 0;
-	WScript.Echo("Введите первое число:");
-	a = WScript.StdIn.ReadLine();
-	WScript.Echo("Введите второе число:");
-	b = WScript.StdIn.ReadLine();
-	if (a > b)
-		WScript.Echo(a,">",b);
-	else if
-		(a < b) WScript.Echo(a,"<",b);
-	else
-		WScript.Echo(a,"=",b);
-} else if(arguments(0) == "/2") {
-	WScript.Echo("Путь к исполняемому файлу сервера сценариев:\n" + WScript.FullName);
-	WScript.Echo("Имя запущенного сценария:\n" + WScript.ScriptName);
-	WScript.Echo("Версия WSH:\n" + WScript.Version);
-} else  {
-	WScript.Echo("Задан неверный аргумент командной строки. Воспользуйтесь справкой: /?");
+/****************************************/
+/*РРјСЏ: 1.js */
+/*РЇР·С‹Рє: JScript */
+/*РћРїРёСЃР°РЅРёРµ: */
+/****************************************/
+
+var ws = WScript.CreateObject("WScript.Shell");
+var ok = ws.Popup("Run the calculator?",0,"Unchuris_08",1);
+if(ok == 1) {
+	ws.LogEvent(0,"The user agreed to start the calculator");
+	calc = ws.Exec("calc");
+	WScript.Sleep(700);
+	ws.AppActivate(calc.ProcessID);
+	ws.SendKeys("3{+}");
+	WScript.Sleep(700);
+	ws.SendKeys("2");
+	WScript.Sleep(700);
+	ws.SendKeys("~");
+	WScript.Sleep(1000);
+	ws.SendKeys("^c");
+	WScript.Sleep(1000);
+	ws.AppActivate(calc.ProcessID);
+	ws.SendKeys("%{F4}");
+
+	ok = ws.Popup("Run a notepad?",0,"Unchuris_08",1);
+	if(ok == 1) {
+		ws.LogEvent(0,"The user agreed to start the notebook");
+		npad = ws.Exec("notepad");
+		ws.AppActivate(npad.ProcessID);
+		WScript.Sleep(500);
+		ws.SendKeys("Result of calculations~");	
+		WScript.Sleep(500);
+		ws.SendKeys("3{+}2=");
+		WScript.Sleep(500);
+		ws.SendKeys("^v~");
+		WScript.Sleep(500);
+		ws.SendKeys("End~");
+		WScript.Sleep(1000);
+
+		ok = ws.Popup("Save a text file?",0,"Unchuris_08",1);
+		if(ok == 1) {
+			ws.LogEvent(0,"The user agreed to save the text file");
+			ws.SendKeys("^s");
+			WScript.Sleep(500);
+			ws.SendKeys("1.txt");
+			WScript.Sleep(1000);
+			ws.SendKeys("~");
+			WScript.Sleep(1000);
+			ws.AppActivate(npad.ProcessID);
+			ws.SendKeys("%{F4}");
+		}
+		else ws.LogEvent(0,"The user did not agree to save the text file");	
+	}
+	else ws.LogEvent(0,"The user did not agree to start notepad");	
 }
+else ws.LogEvent(0,"The user did not agree to start the calculator");
