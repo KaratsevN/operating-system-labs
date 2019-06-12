@@ -1,63 +1,24 @@
-/****************************************/
-/*РРјСЏ: 2.js */
-/*РЇР·С‹Рє: JScript */
-/*РћРїРёСЃР°РЅРёРµ: 1) РЎРѕС…СЂР°РЅСЏРµС‚ РєРѕРїРёСЋ СЃРёСЃС‚РµРјРЅРѕРіРѕ СЂРµРµСЃС‚СЂР°;
-2) Р’РЅРѕСЃРёС‚ РІ СЂРµРµСЃС‚СЂ СЃР»РµРґСѓСЋС‰РёРµ РёР·РјРµРЅРµРЅРёСЏ:
-Р°) РёР·РјРµРЅСЏРµС‚ С†РІРµС‚РѕРІСѓСЋ СЃС…РјСѓ РґР»СЏ С‚РµРєСѓС‰РµРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
-Р±) СЃРєСЂС‹РІР°РµС‚ СЃС‚СЂРµР»РєРё СЏСЂР»С‹РєРѕРІ
-РІ) СЃРєСЂС‹РІР°РµС‚ РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ РґРёСЃРєР° A: РІ РїР°РїРєРµ "РњРѕР№ РєРѕРјРїСЊСЋС‚РµСЂ"
-3) РџРµСЂРµР·Р°РіСЂСѓР¶Р°РµС‚ РєРѕРјРїСЊСЋС‚РµСЂ
-4) РџРѕСЃР»Рµ РїРµСЂРµР·Р°РіСЂСѓР·РєРё РєРѕРјРїСЊСЋС‚РµСЂР° С‡РµСЂРµР· 30 СЃРµРєСѓРЅРґ РІРѕСЃСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РёСЃС…РѕРґРЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ СЂРµРµСЃС‚СЂР°*/
-/****************************************/
-
-arg = WScript.Arguments;
-ws = WScript.CreateObject("WScript.Shell");
-
-if (arg.Count()==0) {
-	WScript.Echo("/1 - performance");
-	WScript.Echo("/2 - restore");
-}
-else {
-	if (arg(0) == "/1") {
-		var regedit = ws.Exec("regedit");
-		WScript.sleep(1000);
-		ws.AppActivate(regedit.ProcessID);
-		WScript.sleep(1000);
-		ws.SendKeys("{HOME}");
-		WScript.sleep(1000);
-		ws.SendKeys("%");
-		WScript.sleep(1000);
-		ws.SendKeys("{DOWN 2}~");
-		WScript.sleep(1000);
-		ws.SendKeys("regedit.reg~");
-		WScript.sleep(10000);
-		ws.SendKeys("{ESC}");
-		WScript.sleep(1000);
-		regedit.Terminate();
-		ws.RegWrite("HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\DWM\\AccentColor","368890","REG_DWORD");
-		WScript.sleep(1000);
-		ws.RegWrite("HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\NoDrives","4","REG_DWORD");
-		
-		WScript.sleep(1000);
-		ws.RegWrite("HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Runonce\\regimport",WScript.ScriptFullName+" /2","REG_SZ");
-
-		WScript.sleep(1000);
-
-		ws.RegDelete("HKEY_CLASSES_ROOT\\lnkfile\\IsShortcut");
-		WScript.sleep(1000);
-		ws.Exec("shutdown -r");
+var shellObj = WScript.CreateObject("WScript.Shell");
+var arguments;
+arguments = WScript.Arguments;
+if (arguments.Count() == 0) {
+	WScript.Echo("Нет аргумента командной строки. Воспользуйтесь справкой: /?");
+} else
+if(arguments(0) == "/?") {
+	WScript.Echo("Аргументы командной строки:\n/1  - Вывести имена и содержимое всех системных переменных окружения.\n/2  - Выводе всех специальных папок.\n/? - Справка.");
+} else if(arguments(0) == "/1") {
+	WScript.Echo("Перменные окружения:");
+	var info = shellObj.Environment("System");
+	finalInfo = new Enumerator(info);
+	while(!finalInfo.atEnd()){
+		WScript.Echo(finalInfo.item());
+		finalInfo.moveNext();
 	}
-	else
-	if (arg(0) == "/2") {
-		WScript.sleep(30000);
-		//ws.RegWrite("HKEY_CLASSES_ROOT\\lnkfile\\IsShortcut", "", "REG_SZ");	
-		//WScript.sleep(1000);
-		ws.RegWrite("HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\DWM\\AccentColor","65536","REG_DWORD");
-
-		ws.RegWrite("HKEY_CLASSES_ROOT\\lnkfile\\IsShortcut", "", "REG_SZ");	
-
-		ws.RegWrite("HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\NoDrives","0","REG_DWORD");
-		
-		ws.Exec("shutdown -r");			
-	}
+} else if(arguments(0) == "/2") {
+	specialFolders = shellObj.SpecialFolders;
+	WScript.Echo("Специальные папки:");
+	for(var i = 0; i < specialFolders.Count(); i++)
+	WScript.Echo(specialFolders(i));
+} else  {
+	WScript.Echo("Задан неверный аргумент командной строки. Воспользуйтесь справкой: /?");
 }

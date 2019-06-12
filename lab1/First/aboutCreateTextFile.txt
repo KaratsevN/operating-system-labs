@@ -1,0 +1,4 @@
+Dos:
+	copy con <FileName>
+UNIX:
+	cat <FileName>
