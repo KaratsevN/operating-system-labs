@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/main/git/operating-system-labs/second-semester/lab1/main.cpp
+sys/types.h
+-
+unistd.h
+-
+iostream
+-
+
