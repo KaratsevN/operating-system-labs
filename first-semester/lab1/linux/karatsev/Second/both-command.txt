@@ -1,0 +1,308 @@
+CHMOD(1)                       User Commands                      CHMOD(1)
+
+NAME
+       chmod - change file mode bits
+
+SYNOPSIS
+       chmod [OPTION]... MODE[,MODE]... FILE...
+       chmod [OPTION]... OCTAL-MODE FILE...
+       chmod [OPTION]... --reference=RFILE FILE...
+
+DESCRIPTION
+       This manual page documents the GNU version of chmod.  chmod changes
+       the file mode bits of each given file according to mode, which  can
+       be either a symbolic representation of changes to make, or an octal
+       number representing the bit pattern for the new mode bits.
+
+       The format of a  symbolic  mode  is  [ugoa...][[-+=][perms...]...],
+       where  perms is either zero or more letters from the set rwxXst, or
+       a single letter from the set ugo.  Multiple symbolic modes  can  be
+       given, separated by commas.
+
+       A  combination  of the letters ugoa controls which users' access to
+       the file will be changed: the user who owns it (u), other users  in
+       the  file's  group (g), other users not in the file's group (o), or
+       all users (a).  If none of these are given, the effect is as if (a)
+       were given, but bits that are set in the umask are not affected.
+
+       The  operator  +  causes the selected file mode bits to be added to
+       the existing file mode bits of each  file;  -  causes  them  to  be
+       removed;  and = causes them to be added and causes unmentioned bits
+       to be removed except that a directory's unmentioned  set  user  and
+       group ID bits are not affected.
+
+       The  letters  rwxXst  select file mode bits for the affected users:
+       read (r), write (w), execute (or search for directories) (x),  exe‐
+       cute/search  only if the file is a directory or already has execute
+       permission for some user (X), set user or  group  ID  on  execution
+       (s), restricted deletion flag or sticky bit (t).  Instead of one or
+       more of these letters, you can specify exactly one of  the  letters
+       ugo: the permissions granted to the user who owns the file (u), the
+       permissions granted to other users who are members  of  the  file's
+       group (g), and the permissions granted to users that are in neither
+       of the two preceding categories (o).
+
+       A numeric mode is from one to four octal digits (0-7),  derived  by
+       adding  up  the  bits  with values 4, 2, and 1.  Omitted digits are
+       assumed to be leading zeros.  The first digit selects the set  user
+       ID  (4)  and set group ID (2) and restricted deletion or sticky (1)
+       attributes.  The second digit selects permissions for the user  who
+       owns  the  file:  read  (4),  write (2), and execute (1); the third
+       selects permissions for other users in the file's group,  with  the
+       same  values;  and  the  fourth  for  other users not in the file's
+       group, with the same values.
+
+       chmod never changes the permissions of symbolic  links;  the  chmod
+       system call cannot change their permissions.  This is not a problem
+       since the permissions of symbolic links are never  used.   However,
+       for  each  symbolic  link listed on the command line, chmod changes
+       the permissions of the pointed-to file.  In contrast, chmod ignores
+       symbolic links encountered during recursive directory traversals.
+
+SETUID AND SETGID BITS
+       chmod  clears  the set-group-ID bit of a regular file if the file's
+       group ID does not match the user's effective group ID or one of the
+       user's  supplementary  group  IDs,  unless the user has appropriate
+       privileges.  Additional restrictions may cause the set-user-ID  and
+       set-group-ID  bits  of  MODE or RFILE to be ignored.  This behavior
+       depends on the policy and functionality  of  the  underlying  chmod
+       system call.  When in doubt, check the underlying system behavior.
+
+       chmod  preserves  a  directory's  set-user-ID and set-group-ID bits
+       unless you explicitly specify otherwise.  You can set or clear  the
+       bits with symbolic modes like u+s and g-s, and you can set (but not
+       clear) the bits with a numeric mode.
+
+RESTRICTED DELETION FLAG OR STICKY BIT
+       The restricted deletion flag or sticky bit is a single  bit,  whose
+       interpretation  depends on the file type.  For directories, it pre‐
+       vents unprivileged users from removing or renaming a  file  in  the
+       directory unless they own the file or the directory; this is called
+       the restricted deletion flag for the  directory,  and  is  commonly
+       found  on  world-writable directories like /tmp.  For regular files
+       on some older systems, the bit saves the program's  text  image  on
+       the  swap  device  so  it  will load more quickly when run; this is
+       called the sticky bit.
+
+OPTIONS
+       Change the mode of each FILE to MODE.  With --reference, change the
+       mode of each FILE to that of RFILE.
+
+       -c, --changes
+              like verbose but report only when a change is made
+
+       -f, --silent, --quiet
+              suppress most error messages
+
+       -v, --verbose
+              output a diagnostic for every file processed
+
+       --no-preserve-root
+              do not treat '/' specially (the default)
+
+       --preserve-root
+              fail to operate recursively on '/'
+
+       --reference=RFILE
+              use RFILE's mode instead of MODE values
+
+       -R, --recursive
+              change files and directories recursively
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       Each          MODE          is          of         the         form
+       '[ugoa]*([-+=]([rwxXst]*|[ugo]))+|[-+=][0-7]+'.
+
+AUTHOR
+       Written by David MacKenzie and Jim Meyering.
+
+REPORTING BUGS
+       GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+       Report   chmod   translation   bugs   to    <http://translationpro‐
+       ject.org/team/>
+
+COPYRIGHT
+       Copyright  ©  2017  Free Software Foundation, Inc.  License GPLv3+:
+       GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This is free software: you are free to change and redistribute  it.
+       There is NO WARRANTY, to the extent permitted by law.
+
+SEE ALSO
+       chmod(2)
+
+       Full     documentation    at:    <http://www.gnu.org/software/core‐
+       utils/chmod>
+       or available locally via: info '(coreutils) chmod invocation'
+
+GNU coreutils 8.28             January 2018                       CHMOD(1)
+TEST(1)                        User Commands                       TEST(1)
+
+NAME
+       test - check file types and compare values
+
+SYNOPSIS
+       test EXPRESSION
+       test
+
+       [ EXPRESSION ]
+       [ ]
+       [ OPTION
+
+DESCRIPTION
+       Exit with the status determined by EXPRESSION.
+
+       --help display this help and exit
+
+       --version
+              output version information and exit
+
+       An  omitted EXPRESSION defaults to false.  Otherwise, EXPRESSION is
+       true or false and sets exit status.  It is one of:
+
+       ( EXPRESSION )
+              EXPRESSION is true
+
+       ! EXPRESSION
+              EXPRESSION is false
+
+       EXPRESSION1 -a EXPRESSION2
+              both EXPRESSION1 and EXPRESSION2 are true
+
+       EXPRESSION1 -o EXPRESSION2
+              either EXPRESSION1 or EXPRESSION2 is true
+
+       -n STRING
+              the length of STRING is nonzero
+
+       STRING equivalent to -n STRING
+
+       -z STRING
+              the length of STRING is zero
+
+       STRING1 = STRING2
+              the strings are equal
+
+       STRING1 != STRING2
+              the strings are not equal
+
+       INTEGER1 -eq INTEGER2
+              INTEGER1 is equal to INTEGER2
+
+       INTEGER1 -ge INTEGER2
+              INTEGER1 is greater than or equal to INTEGER2
+
+       INTEGER1 -gt INTEGER2
+              INTEGER1 is greater than INTEGER2
+
+       INTEGER1 -le INTEGER2
+              INTEGER1 is less than or equal to INTEGER2
+
+       INTEGER1 -lt INTEGER2
+              INTEGER1 is less than INTEGER2
+
+       INTEGER1 -ne INTEGER2
+              INTEGER1 is not equal to INTEGER2
+
+       FILE1 -ef FILE2
+              FILE1 and FILE2 have the same device and inode numbers
+
+       FILE1 -nt FILE2
+              FILE1 is newer (modification date) than FILE2
+
+       FILE1 -ot FILE2
+              FILE1 is older than FILE2
+
+       -b FILE
+              FILE exists and is block special
+
+       -c FILE
+              FILE exists and is character special
+
+       -d FILE
+              FILE exists and is a directory
+
+       -e FILE
+              FILE exists
+
+       -f FILE
+              FILE exists and is a regular file
+
+       -g FILE
+              FILE exists and is set-group-ID
+
+       -G FILE
+              FILE exists and is owned by the effective group ID
+
+       -h FILE
+              FILE exists and is a symbolic link (same as -L)
+
+       -k FILE
+              FILE exists and has its sticky bit set
+
+       -L FILE
+              FILE exists and is a symbolic link (same as -h)
+
+       -O FILE
+              FILE exists and is owned by the effective user ID
+
+       -p FILE
+              FILE exists and is a named pipe
+
+       -r FILE
+              FILE exists and read permission is granted
+
+       -s FILE
+              FILE exists and has a size greater than zero
+
+       -S FILE
+              FILE exists and is a socket
+
+       -t FD  file descriptor FD is opened on a terminal
+
+       -u FILE
+              FILE exists and its set-user-ID bit is set
+
+       -w FILE
+              FILE exists and write permission is granted
+
+       -x FILE
+              FILE exists and execute (or search) permission is granted
+
+       Except for -h and -L, all FILE-related tests  dereference  symbolic
+       links.   Beware that parentheses need to be escaped (e.g., by back‐
+       slashes) for shells.  INTEGER may also be -l STRING,  which  evalu‐
+       ates to the length of STRING.
+
+       NOTE:  Binary  -a and -o are inherently ambiguous.  Use 'test EXPR1
+       && test EXPR2' or 'test EXPR1 || test EXPR2' instead.
+
+       NOTE: [ honors the --help and --version options, but test does not.
+       test treats each of those as it treats any other nonempty STRING.
+
+       NOTE:  your  shell may have its own version of test and/or [, which
+       usually supersedes the version described  here.   Please  refer  to
+       your  shell's  documentation  for details about the options it sup‐
+       ports.
+
+AUTHOR
+       Written by Kevin Braunsdorf and Matthew Bradburn.
+
+REPORTING BUGS
+       GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+       Report [ translation bugs to <http://translationproject.org/team/>
+
+COPYRIGHT
+       Copyright © 2017 Free Software Foundation,  Inc.   License  GPLv3+:
+       GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+       This  is free software: you are free to change and redistribute it.
+       There is NO WARRANTY, to the extent permitted by law.
+
+SEE ALSO
+       Full documentation at: <http://www.gnu.org/software/coreutils/[>
+       or available locally via: info '(coreutils) test invocation'
+
+GNU coreutils 8.28             January 2018                        TEST(1)

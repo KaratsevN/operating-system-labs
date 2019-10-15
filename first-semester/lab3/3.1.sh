@@ -19,6 +19,5 @@ echo 'File is available for using'
 else
 echo 'File is not available for using'
 fi
-read 111
-
+read asd    
 

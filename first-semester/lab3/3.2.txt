@@ -1,0 +1,9 @@
+итого 28K
+3802960 -rw-r--r-- 1 nikita nikita 3,9K окт 15 19:25 report.txt
+3802961 -rwxrwxrwx 4 nikita nikita    0 окт 15 19:42 3.2.txt
+3802962 -rw-rw-r-- 1 nikita nikita  383 окт 15 19:24 3.1.sh
+3802963 -rw-rw-r-- 1 nikita nikita  322 окт 15 19:42 3.2.sh
+3802964 -rw-rw-r-- 1 nikita nikita  461 апр 10  2017 3.3.sh
+3802965 -rw-rw-r-- 1 nikita nikita  102 фев 28  2017 cos.cpp
+3803032 -rw-rw-r-- 1 nikita nikita  101 фев 28  2017 sin.cpp
+3803033 -rw-rw-r-- 1 nikita nikita   15 апр 11  2017 Новый текстовый документ.txt

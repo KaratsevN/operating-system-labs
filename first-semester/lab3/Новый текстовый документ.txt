@@ -1,2 +1,11 @@
-%jobs
+./sin.o &
+./cos
+Ctrl+z
+bg 
+fg 1
+jobs
+ps -aux
+
+kill [number]
+
 %ps -aux
