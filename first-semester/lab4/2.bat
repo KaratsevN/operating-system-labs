@@ -1,5 +1,4 @@
-@echo off
-shutdown -r -t 60 -c "test reset: "
+@ECHO OFF
+shutdown /s /t 60 /c "Test reboot"
 pause
-shutdown -a
-pause
+shutdown /a

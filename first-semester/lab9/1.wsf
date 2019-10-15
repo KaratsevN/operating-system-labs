@@ -1,0 +1,42 @@
+<?XML version="1.0" standalone="yes"?>
+<package>
+	<job id="one">
+		<runtime>
+			<description>
+			Имя: Лабораторная 9.1.
+			Описание: 
+				1. Создайте самодокументируемый JScript-сценарий с использованием технологии XML, который выполняет 
+				следующие действия:
+				1) запрашивает в окнонном режиме имя файла;
+				2) проверяет, установлен ли для данного файла атрибут "Архивный";
+				3) если атрибут установлен, то он сбрасывается, если не установлен - устанавливается.
+			</description>
+		</runtime>
+		<script language="VBScript">
+			<![CDATA[
+			Function InputFileName
+			InputFileName = InputBox("Input file name:", "Unchuris_09")
+			End Function
+			]]>
+		</script>
+		<script language="JScript">
+			<![CDATA[
+			var a = InputFileName();
+			var b = WScript.CreateObject("Scripting.FileSystemObject");
+			if(b.FileExists(a)) {
+				var c = b.GetFile(a);
+				var d = c.Attributes;
+				if(d == 32) {
+					WScript.Echo("new file is archive");
+					c.Attributes -= 32; 
+				}
+				else {
+					WScript.Echo("new file is'n archive");
+					c.Attributes += 32;
+				}
+			}
+			else WScript.Echo("File is'n exists");
+			]]>
+		</script>
+	</job>
+</package>

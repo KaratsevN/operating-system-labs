@@ -45,7 +45,6 @@ else {
 
 		ws.RegDelete("HKEY_CLASSES_ROOT\\lnkfile\\IsShortcut");
 		WScript.sleep(1000);
-		//regedit.reg
 		ws.Exec("shutdown -r");
 	}
 	else
