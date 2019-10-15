@@ -1,0 +1,14 @@
+ Том в устройстве C имеет метку Windows 8.1
+ Серийный номер тома: 6C06-AB7D
+
+ Содержимое папки C:\Users\nekit\Documents\git\operating-system-labs\first-semester\lab1\windows\Second
+
+15.10.2019  18:04    <DIR>          .
+15.10.2019  18:04    <DIR>          ..
+15.10.2019  18:04             1 739 all.txt
+15.10.2019  18:01             1 479 command.txt
+15.10.2019  17:58                53 create.txt
+15.10.2019  18:04                 0 dir.txt
+15.10.2019  18:00               206 OS.txt
+               5 файлов          3 477 байт
+               2 папок  52 760 309 760 байт свободно
