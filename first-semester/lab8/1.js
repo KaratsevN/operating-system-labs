@@ -9,11 +9,14 @@ var ok = ws.Popup("Run the calculator?",0,"Unchuris_08",1);
 if(ok == 1) {
 	ws.LogEvent(0,"The user agreed to start the calculator");
 	calc = ws.Exec("calc");
-	WScript.Sleep(700);
+	WScript.Sleep(1000);
 	ws.AppActivate(calc.ProcessID);
-	ws.SendKeys("3{+}");
-	WScript.Sleep(700);
+	WScript.Sleep(1000);
 	ws.SendKeys("2");
+	WScript.Sleep(1000);
+	ws.SendKeys("{+}");
+	WScript.Sleep(1000);
+	ws.SendKeys("3");
 	WScript.Sleep(700);
 	ws.SendKeys("~");
 	WScript.Sleep(1000);

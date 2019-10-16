@@ -19,7 +19,9 @@
 
 			var disk = a.GetDriveName(ws.RegRead("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders\\AppData"));
 			var home = ws.RegRead("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders\\Personal");
-			var id = ws.RegRead("HKEY_CURRENT_USER\\Identities\\Defualt User ID");
+			var id   = "nekit";
+			//"ws.RegRead("nekit");
+			//var id = ws.RegRead("HKEY_CURRENT_USER\\Identities\\Defualt User ID");
 			var text = ws.RegRead("HKEY_USERS\\.DEFAULT\\Keyboard Layout\\Preload\\1");
 
 			if (text=="00000409") text="русская";

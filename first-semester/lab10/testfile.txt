@@ -1,0 +1,9 @@
+File System: NTFS
+Avalible Space: 210874949632
+Is Ready: true
+Path: C:
+Root Folder: C:\
+Serial Number: 182130094
+Share Name: 
+Total Size: 249499217920
+Volume Name: 
