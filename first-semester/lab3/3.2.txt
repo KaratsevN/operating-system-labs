@@ -1,9 +1,11 @@
-итого 28K
-3802960 -rw-r--r-- 1 nikita nikita 3,9K окт 15 19:25 report.txt
-3802961 -rwxrwxrwx 4 nikita nikita    0 окт 15 19:42 3.2.txt
-3802962 -rw-rw-r-- 1 nikita nikita  383 окт 15 19:24 3.1.sh
-3802963 -rw-rw-r-- 1 nikita nikita  322 окт 15 19:42 3.2.sh
-3802964 -rw-rw-r-- 1 nikita nikita  461 апр 10  2017 3.3.sh
-3802965 -rw-rw-r-- 1 nikita nikita  102 фев 28  2017 cos.cpp
-3803032 -rw-rw-r-- 1 nikita nikita  101 фев 28  2017 sin.cpp
-3803033 -rw-rw-r-- 1 nikita nikita   15 апр 11  2017 Новый текстовый документ.txt
+total 52K
+6557596 -rw-rw-r-- 1 main main  386 окт 16 13:47 3.1.sh
+6557597 -rw-rw-r-- 1 main main  322 окт 16 13:47 3.2.sh
+6557598 -rwxrwxr-x 1 main main    0 окт 16 13:50 3.2.txt
+6557599 -rw-rw-r-- 1 main main  461 окт 16 13:47 3.3.sh
+6557600 -rw-rw-r-- 1 main main  102 окт 16 13:47 cos.cpp
+6557601 -rwxrwxr-x 1 main main 8,2K окт 16 13:47 cos.o
+6557602 -rw-rw-r-- 1 main main 2,3K окт 16 13:50 report.txt
+6557603 -rw-rw-r-- 1 main main  101 окт 16 13:47 sin.cpp
+6557604 -rwxrwxr-x 1 main main 8,2K окт 16 13:47 sin.o
+6557605 -rw-rw-r-- 1 main main   81 окт 16 13:47 Новый текстовый документ.txt
