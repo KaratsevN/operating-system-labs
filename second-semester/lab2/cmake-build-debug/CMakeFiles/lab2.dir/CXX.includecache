@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/nikita/git/operating-system-labs/second-semester/lab2/main.cpp
+iostream
+-
+structure.cpp
+/home/nikita/git/operating-system-labs/second-semester/lab2/structure.cpp
+fcntl.h
+-
+sys/mman.h
+-
+zconf.h
+-
+
+/home/nikita/git/operating-system-labs/second-semester/lab2/structure.cpp
+
