@@ -8,6 +8,7 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
+<<<<<<< HEAD
 				<Option working_dir="/home/nikita/git/operating-system-labs/second-semester/lab2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
@@ -30,6 +31,30 @@
 			<Target title="lab2">
 				<Option output="/home/nikita/git/operating-system-labs/second-semester/lab2/cmake-build-debug/lab2" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/nikita/git/operating-system-labs/second-semester/lab2/cmake-build-debug"/>
+=======
+				<Option working_dir="/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lab2">
+				<Option output="/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/lab2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug"/>
+>>>>>>> 8b96c1e84f31b599e314ba16129a9efab9e472cf
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -44,6 +69,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/make -j4 -f &quot;/home/nikita/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab2"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nikita/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/nikita/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -53,6 +79,17 @@
 			<Target title="lab2/fast">
 				<Option output="/home/nikita/git/operating-system-labs/second-semester/lab2/cmake-build-debug/lab2" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/nikita/git/operating-system-labs/second-semester/lab2/cmake-build-debug"/>
+=======
+					<Build command="/usr/bin/make -j2 -f &quot;/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab2"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="lab2/fast">
+				<Option output="/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/lab2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug"/>
+>>>>>>> 8b96c1e84f31b599e314ba16129a9efab9e472cf
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -67,6 +104,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
+<<<<<<< HEAD
 					<Build command="/usr/bin/make -j4 -f &quot;/home/nikita/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab2/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/nikita/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/home/nikita/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -88,6 +126,29 @@
 			<Option target="lab2"/>
 		</Unit>
 		<Unit filename="/home/nikita/git/operating-system-labs/second-semester/lab2/CMakeLists.txt">
+=======
+					<Build command="/usr/bin/make -j2 -f &quot;/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 lab2/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/main/git/operating-system-labs/second-semester/lab2/main.c">
+			<Option target="lab2"/>
+		</Unit>
+		<Unit filename="/home/main/git/operating-system-labs/second-semester/lab2/CMakeLists.txt">
+>>>>>>> 8b96c1e84f31b599e314ba16129a9efab9e472cf
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /snap/clion/88/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/nikita/git/operating-system-labs/second-semester/lab2
 -- The C compiler identification is GNU 7.4.0
 -- The CXX compiler identification is GNU 7.4.0
@@ -16,3 +17,9 @@
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/nikita/git/operating-system-labs/second-semester/lab2/cmake-build-debug
+=======
+/snap/clion/92/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/main/git/operating-system-labs/second-semester/lab2
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug
+>>>>>>> 8b96c1e84f31b599e314ba16129a9efab9e472cf

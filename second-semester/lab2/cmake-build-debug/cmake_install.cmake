@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: /home/nikita/git/operating-system-labs/second-semester/lab2
+=======
+# Install script for directory: /home/main/git/operating-system-labs/second-semester/lab2
+>>>>>>> 8b96c1e84f31b599e314ba16129a9efab9e472cf
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +49,9 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< HEAD
 file(WRITE "/home/nikita/git/operating-system-labs/second-semester/lab2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+=======
+file(WRITE "/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> 8b96c1e84f31b599e314ba16129a9efab9e472cf
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

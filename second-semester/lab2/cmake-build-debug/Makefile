@@ -39,19 +39,33 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
+<<<<<<< HEAD
 CMAKE_COMMAND = /snap/clion/88/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
 RM = /snap/clion/88/bin/cmake/linux/bin/cmake -E remove -f
+=======
+CMAKE_COMMAND = /snap/clion/92/bin/cmake/linux/bin/cmake
+
+# The command to remove a file.
+RM = /snap/clion/92/bin/cmake/linux/bin/cmake -E remove -f
+>>>>>>> 8b96c1e84f31b599e314ba16129a9efab9e472cf
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/nikita/git/operating-system-labs/second-semester/lab2
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/nikita/git/operating-system-labs/second-semester/lab2/cmake-build-debug
+=======
+CMAKE_SOURCE_DIR = /home/main/git/operating-system-labs/second-semester/lab2
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug
+>>>>>>> 8b96c1e84f31b599e314ba16129a9efab9e472cf
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +73,11 @@ CMAKE_BINARY_DIR = /home/nikita/git/operating-system-labs/second-semester/lab2/c
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+<<<<<<< HEAD
 	/snap/clion/88/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+=======
+	/snap/clion/92/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+>>>>>>> 8b96c1e84f31b599e314ba16129a9efab9e472cf
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +88,11 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+<<<<<<< HEAD
 	/snap/clion/88/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+=======
+	/snap/clion/92/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+>>>>>>> 8b96c1e84f31b599e314ba16129a9efab9e472cf
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +102,15 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nikita/git/operating-system-labs/second-semester/lab2/cmake-build-debug/CMakeFiles /home/nikita/git/operating-system-labs/second-semester/lab2/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/nikita/git/operating-system-labs/second-semester/lab2/cmake-build-debug/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/CMakeFiles /home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/CMakeFiles 0
+>>>>>>> 8b96c1e84f31b599e314ba16129a9efab9e472cf
 .PHONY : all
 
 # The main clean target

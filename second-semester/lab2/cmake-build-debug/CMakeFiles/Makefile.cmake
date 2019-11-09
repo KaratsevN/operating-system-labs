@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.15.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.15.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.15.3/CMakeSystem.cmake"
+<<<<<<< HEAD
   "/snap/clion/88/bin/cmake/linux/share/cmake-3.15/Modules/CMakeCInformation.cmake"
   "/snap/clion/88/bin/cmake/linux/share/cmake-3.15/Modules/CMakeCXXInformation.cmake"
   "/snap/clion/88/bin/cmake/linux/share/cmake-3.15/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
@@ -33,6 +34,30 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/snap/clion/88/bin/cmake/linux/share/cmake-3.15/Modules/Platform/Linux.cmake"
   "/snap/clion/88/bin/cmake/linux/share/cmake-3.15/Modules/Platform/UnixPaths.cmake"
   "/snap/clion/88/bin/cmake/linux/share/cmake-3.15/Modules/ProcessorCount.cmake"
+=======
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/CMakeCInformation.cmake"
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/CMakeCXXInformation.cmake"
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/CMakeCommonLanguageInclude.cmake"
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/CMakeFindCodeBlocks.cmake"
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/CMakeGenericSystem.cmake"
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/CMakeInitializeConfigs.cmake"
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/CMakeLanguageInformation.cmake"
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/CMakeSystemSpecificInformation.cmake"
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/CMakeSystemSpecificInitialize.cmake"
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/Compiler/GNU-C.cmake"
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/Compiler/GNU-CXX.cmake"
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/Compiler/GNU.cmake"
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/Internal/CMakeCheckCompilerFlag.cmake"
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/Platform/Linux-GNU-C.cmake"
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/Platform/Linux-GNU-CXX.cmake"
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/Platform/Linux-GNU.cmake"
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/Platform/Linux.cmake"
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/Platform/UnixPaths.cmake"
+  "/snap/clion/92/bin/cmake/linux/share/cmake-3.15/Modules/ProcessorCount.cmake"
+>>>>>>> 8b96c1e84f31b599e314ba16129a9efab9e472cf
   )
 
 # The corresponding makefile is:
