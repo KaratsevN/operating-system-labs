@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/main/git/operating-system-labs/second-semester/lab3/main.c
+sys/types.h
+-
+unistd.h
+-
+stdio.h
+-
+math.h
+-
+

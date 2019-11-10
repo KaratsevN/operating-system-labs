@@ -1,0 +1,3 @@
+/home/main/git/operating-system-labs/second-semester/lab3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/main/git/operating-system-labs/second-semester/lab3/cmake-build-debug/CMakeFiles/lab3.dir
+/home/main/git/operating-system-labs/second-semester/lab3/cmake-build-debug/CMakeFiles/edit_cache.dir
