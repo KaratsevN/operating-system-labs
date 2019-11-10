@@ -6,6 +6,21 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
+/home/nikita/git/operating-system-labs/second-semester/lab2/main.cpp
+iostream
+-
+structure.cpp
+/home/nikita/git/operating-system-labs/second-semester/lab2/structure.cpp
+fcntl.h
+-
+sys/mman.h
+-
+zconf.h
+-
+
+/home/nikita/git/operating-system-labs/second-semester/lab2/structure.cpp
+=======
 /home/main/git/operating-system-labs/second-semester/lab2/main.cpp
 sys/types.h
 -
@@ -19,4 +34,5 @@ bits/fcntl-linux.h
 -
 fcntl.h
 -
+>>>>>>> 8b96c1e84f31b599e314ba16129a9efab9e472cf
 

@@ -6,6 +6,15 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
+/home/nikita/git/operating-system-labs/second-semester/lab2/main.c
+stdio.h
+-
+fcntl.h
+-
+sys/mman.h
+-
+=======
 /home/main/git/operating-system-labs/second-semester/lab2/main.c
 sys/types.h
 -
@@ -19,6 +28,7 @@ sys/stat.h
 -
 fcntl.h
 -
+>>>>>>> 8b96c1e84f31b599e314ba16129a9efab9e472cf
 zconf.h
 -
 
