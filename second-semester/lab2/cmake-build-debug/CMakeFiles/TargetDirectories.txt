@@ -1,9 +1,0 @@
-<<<<<<< HEAD
-/home/nikita/git/operating-system-labs/second-semester/lab2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/nikita/git/operating-system-labs/second-semester/lab2/cmake-build-debug/CMakeFiles/lab2.dir
-/home/nikita/git/operating-system-labs/second-semester/lab2/cmake-build-debug/CMakeFiles/edit_cache.dir
-=======
-/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/CMakeFiles/lab2.dir
-/home/main/git/operating-system-labs/second-semester/lab2/cmake-build-debug/CMakeFiles/edit_cache.dir
->>>>>>> 8b96c1e84f31b599e314ba16129a9efab9e472cf
