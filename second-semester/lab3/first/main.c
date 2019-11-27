@@ -4,21 +4,30 @@
 #include <math.h>
 
 int main(int argc, char *argv[]) {
+
     pid_t pid, ppid;
     pid = fork();
     double x = 0;
-    double y =0;
-// При успешном создании нового процесса с этого места //псевдопараллельно начинают работать два процесса
-// Узнаем идентификаторы текущего и родительского процесса // в каждом из процессов
-    //pid = getpid();
-    ppid = getppid();
+    double y = 0;
+
+    if(argv[1] == NULL || argv[2] == NULL){
+        printf("Error");
+        _exit(1);
+    }
+
+    //Да простит меня Тюменцев Е.А.
+
     switch(pid) {
         case -1:
-            perror("fork"); /* произошла ошибка */
-            _exit(1); /*выход из родительского процесса*/
+            perror("fork");
+            _exit(1);
         case 0:
+            pid = getpid();
+            ppid = getppid();
             while(y <= 1){
-                printf("tg(%d)=%d\n",y,1/tan(y));
+                printf("Pid = %d, Ppid = %d, ctg(%f) = %f\n", (int)pid, (int)ppid, y, 1/tan(y));
+                //printf("ctg(%f)=%f", y);
+                //printf("%f\n", 1/tan(y));
                 y += atof(argv[2]);
             }
 //            printf(" CHILD: Это процесс-потомок!\n");
@@ -31,11 +40,16 @@ int main(int argc, char *argv[]) {
 //            printf(" CHILD: Выход!\n");
             exit(0);
         default:
+            pid = getpid();
+            ppid = getppid();
+            //printf("My pid = %d, my ppid = %d\n", (int)pid, (int)ppid);
             while(x <= 1){
-                printf("tg(%d)=%d\n",x,tan(x));
+                printf("\tPid = %d, Ppid = %d, tg(%f) = %f\n", (int)pid, (int)ppid, x, tan(x));
+//                printf("tg(%f) = %f", x);
+//                printf("%f\n",tan(x));
                 x += atof(argv[1]);
             }
-
+            exit(0);
 //            printf("PARENT: Это процесс-родитель!\n");
 //            printf("PARENT: Мой PID -- %d\n", getpid());
 //            printf("PARENT: PID моего потомка %d\n",pid);

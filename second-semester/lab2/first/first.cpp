@@ -38,7 +38,7 @@ int main(void)
 		exit(1);
 	}
 
-	length = 2 * sizeof(struct A);
+	length = 10 * sizeof(struct A);
 	ftruncate(fd, length);
 	ptr = (struct A *)mmap(0, length, PROT_WRITE | PROT_READ, MAP_SHARED, fd, 0);
 	close(fd);
@@ -77,6 +77,7 @@ int main(void)
 			tmpptr++;
 			break;
 		case '2':
+		{
 			char symbol;
 			int k;
 			cout << "Введите ключ записи, которую вы хотите изменить: ";
@@ -90,8 +91,9 @@ int main(void)
 				{
 					keyPtr = tmpptr1;
 					break;
-				}
+				} else{
 				tmpptr1++;
+				}
 			}
 
 			while (symbol != '4')
@@ -124,6 +126,7 @@ int main(void)
 				}
 			}
 			break;
+		}
 		}
 	}
 

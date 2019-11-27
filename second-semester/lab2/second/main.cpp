@@ -20,8 +20,8 @@ int main()
 
     cout << "Введите путь к директории: ";
     cin >> path;
-    remove(path);
-    //remove_lifehack(path);
+    //remove(path);
+    remove_lifehack(path);
     cout << endl
          << "Complete!";
     cin >> a;
@@ -31,7 +31,7 @@ int main()
 
 int remove_lifehack(string path){
     //username deanone :0
-    string newpath = "/home/nikita/git/operating-system-labs/second-semester/lab2/second/main.sh " + path;
+    string newpath = "/home/main/git/operating-system-labs/second-semester/lab2/second/main.sh " + path;
     system(newpath.c_str());
 }
 
