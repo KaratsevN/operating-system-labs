@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/main/git/operating-system-labs/second-semester/lab3/main.c
+/home/main/git/operating-system-labs/second-semester/lab3/first/main.c
 sys/types.h
 -
 unistd.h

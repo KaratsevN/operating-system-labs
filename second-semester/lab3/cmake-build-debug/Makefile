@@ -123,32 +123,32 @@ lab3/fast:
 	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/build
 .PHONY : lab3/fast
 
-main.o: main.c.o
+first/main.o: first/main.c.o
 
-.PHONY : main.o
+.PHONY : first/main.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/main.c.o
-.PHONY : main.c.o
+first/main.c.o:
+	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/first/main.c.o
+.PHONY : first/main.c.o
 
-main.i: main.c.i
+first/main.i: first/main.c.i
 
-.PHONY : main.i
+.PHONY : first/main.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/main.c.i
-.PHONY : main.c.i
+first/main.c.i:
+	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/first/main.c.i
+.PHONY : first/main.c.i
 
-main.s: main.c.s
+first/main.s: first/main.c.s
 
-.PHONY : main.s
+.PHONY : first/main.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/main.c.s
-.PHONY : main.c.s
+first/main.c.s:
+	$(MAKE) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/first/main.c.s
+.PHONY : first/main.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... lab3"
 	@echo "... edit_cache"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... first/main.o"
+	@echo "... first/main.i"
+	@echo "... first/main.s"
 .PHONY : help
 
 

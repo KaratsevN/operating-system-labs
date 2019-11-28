@@ -84,7 +84,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/main/git/operating-system-labs/second-semester/lab3/main.c">
+		<Unit filename="/home/main/git/operating-system-labs/second-semester/lab3/first/main.c">
 			<Option target="lab3"/>
 		</Unit>
 		<Unit filename="/home/main/git/operating-system-labs/second-semester/lab3/CMakeLists.txt">

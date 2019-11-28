@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
         case 0:
             pid = getpid();
             ppid = getppid();
-            while (y <= 1) {
+            while (y < 0.4999999) {
                 printf("Pid = %d, Ppid = %d, ctg(%5.3f) = %f\n", (int) pid, (int) ppid, y, 1 / tan(y));
                 y += atof(argv[2]);
             }
@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
         default:
             pid = getpid();
             ppid = getppid();
-            while (x <= 1) {
+            while (x < 0.5) {
                 printf("\tPid = %d, Ppid = %d, tg(%5.3f) = %f\n", (int) pid, (int) ppid, x, tan(x));
                 x += atof(argv[1]);
             }
